@@ -1,6 +1,6 @@
-import { Request, Response, NextFunction } from 'express';
 import express from 'express';
 import userControllers from '../controllers/UserController';
+import { authenticate } from '../middlewares/Authenticate';
 
 var router = express.Router();
 
@@ -10,5 +10,5 @@ export default [
 	 *
 	 * Gets all users in db
 	 */
-	router.get('/users', userControllers.getUsers),
+	router.get('/users', authenticate, userControllers.getUsers),
 ];
