@@ -5,6 +5,5 @@ export const authenticate = async (
 	res: Response,
 	next: NextFunction
 ) => {
-	console.log('authenticate');
 	next();
 };
