@@ -6,9 +6,15 @@ var router = express.Router();
 
 export default [
 	/**
-	 * GET /users
-	 *
-	 * Gets all users in db
+	 * @swagger
+	 * /api/v1/users:
+	 *   get:
+	 *     description: Get all users
+	 *     responses:
+	 *       200:
+	 *         description: Successful response
+	 *       400:
+	 *         description: Bad request
 	 */
 	router.get('/users', authenticate, userControllers.getUsers),
 ];
