@@ -1,4 +1,6 @@
-const getUsers = (data: string) => {};
+const getUsers = () => {
+	return { data: '🔥🔥🔥🔥🔥🔥🔥🔥' };
+};
 
 export default {
 	getUsers,

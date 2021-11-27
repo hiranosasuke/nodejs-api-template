@@ -1,7 +1,7 @@
 import userRepositories from '../repositories/User.repository';
 
-const getUsers = (data: string) => {
-	userRepositories.getUsers('calling repository from service');
+const getUsers = () => {
+	return userRepositories.getUsers();
 };
 
 export default {
