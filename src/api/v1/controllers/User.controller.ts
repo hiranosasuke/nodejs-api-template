@@ -1,6 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import userServices from '../services/User.service';
-import { ClientResponse } from '../utilities/client-response.model';
+import { ClientResponse } from '../utilities/client-response';
 
 const getUsers = async (req: Request, res: Response) => {
 	try {
