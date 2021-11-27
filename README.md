@@ -1,6 +1,6 @@
 # nodejs-api-template
 
-Run `npm i` to install all the npm packages locally to run the project.
+Run `npm i` to install all the npm packages locally to run the project. Then run `npm run start` to run the project.
 
 ## Swagger UI for api docs
 
