@@ -1,12 +1,12 @@
 require('dotenv').config();
 import express, { Request, Response } from 'express';
-import { applyV1Routes } from './config/index';
+import { applyRoutes } from './config/index';
 import { applySwagger } from './config/swagger.config';
-import routes from './api/v1/routes/index';
+import routes from './api/routes/index';
 
 const app = express();
 
-applyV1Routes(routes, app);
+applyRoutes(routes, app);
 applySwagger(app);
 
 app.listen(3000, () => {

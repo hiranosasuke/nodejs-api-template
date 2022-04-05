@@ -15,11 +15,11 @@ const swaggerOptions: swaggerJSDoc.Options = {
 			servers: ['http://localhost:3000'],
 		},
 	},
-	apis: ['src/api/v1/routes/*.ts'],
+	apis: ['src/api/routes/*.ts'],
 };
 
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 
 export const applySwagger = (app: Express) => {
-	app.use('/api/v1/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
+	app.use('/api/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 };

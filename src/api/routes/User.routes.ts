@@ -8,7 +8,7 @@ var router = express.Router();
 export default [
 	/**
 	 * @swagger
-	 * /api/v1/users:
+	 * /api/users:
 	 *   get:
 	 *     description: Get all users
 	 *     responses:
