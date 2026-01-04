@@ -1,7 +1,7 @@
 import express from 'express';
 import userControllers from '../controllers/User.controller';
 import { authenticate } from '../middlewares/Authenticate';
-import { rateLimiterThreeSeconds } from '../middlewares/RateLimit';
+import { limiter } from '../middlewares/RateLimit';
 
 var router = express.Router();
 
@@ -19,7 +19,7 @@ export default [
 	 */
 	router.get(
 		'/users',
-		[authenticate, rateLimiterThreeSeconds],
+		[authenticate, limiter],
 		userControllers.getUsers
 	),
 ];
